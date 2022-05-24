@@ -160,8 +160,8 @@ def main():
                     ).mark_bar().encode(
                     x=alt.X("ABS_MEAN:Q", title="Confidence"),
                     y=alt.Y("index:N", sort="-x", title="Sensors"),
-                 tooltip=["Neighbor", alt.Tooltip("Confidence", format=".3f")],
-                 color=alt.Color("Confidence:Q", scale=alt.Scale(), legend=None)
+                 tooltip=["index", alt.Tooltip("ABS_MEAN", format=".3f")],
+                 color=alt.Color("ABS_MEAN:Q", scale=alt.Scale(), legend=None)
                 ).properties(
                   height=25 * ranking + 90
                 ).configure_axis(grid=False)
