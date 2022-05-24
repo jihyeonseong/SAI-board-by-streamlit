@@ -71,6 +71,7 @@ def main():
 
     ###### CHART: METRIC OVER TIME ######
     st.markdown("---")
+    st.header("Data Monitoring")
     col1, col2, col3 = st.columns((1, 1, 3))
     hour = col1.selectbox("Hour", range(0, 23))
     min = col2.selectbox("Minute", range(0, 60))
