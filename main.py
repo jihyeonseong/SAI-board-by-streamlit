@@ -116,8 +116,8 @@ def main():
             break
         else:
             cnt+=1
-
-    st.subheader("Recent Attack"+str(datetime.strptime(attack_end ,"%Y-%m-%d %H:%M:%S")-datetime.strptime(attack_start, "%Y-%m-%d %H:%M:%S"))+" attack remains")
+    st.header("Recent Attack")
+    st.subheader(str(datetime.strptime(attack_end ,"%Y-%m-%d %H:%M:%S")-datetime.strptime(attack_start, "%Y-%m-%d %H:%M:%S"))+" attack remains")
     sensor = st.selectbox("Attacked Sensors", data.columns[:-1])
     col1, col2 = st.columns((1, 4))
     metric_options = [5, 10, 30, 60]
