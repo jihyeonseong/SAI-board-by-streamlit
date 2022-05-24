@@ -13,7 +13,9 @@ from plt_setup import finastra_theme
           allow_output_mutation=True)
 def load_data(data_category='validation'):
     data1 = pd.read_csv(f'./data/{data_category}_1.csv')
+    data1.drop(columns=["Unnamed: 0"], inplace=True)
     data2 = pd.read_csv(f'./data/{data_category}_2.csv')
+    data2.drop(columns=["Unnamed: 0"], inplace=True)
     data = pd.concat([data1, data2])
     data.set_index('timestamp', inplace=True)
     return data
