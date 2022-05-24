@@ -149,6 +149,23 @@ def main():
         width=200
     ).interactive()
     col2.altair_chart(metric_chart, use_container_width=True)
+          
+    ###Model Interpretability###
+    st.markdown("---")
+    ranking = st.sidebar.slider("Select Number of Important Sensor Ranking", 1, 20, value=5)
+    rel_rank = pd.read_csv('./data/ranking.csv')
+    rel_ranking.set_index(0, inplace=True)
+    top_ranking = rel_rank.index[:ranking]
+    conf_plot = alt.Chart(top_ranking, title=f"Top {ranking} important sensors", padding={"left": 1, "top": 10, "right": 1, "bottom": 1}
+                    ).mark_bar().encode(
+                    x=alt.X("Confidence:Q", title="Confidence"),
+                    y=alt.Y("Neighbor:N", sort="-x", title="Similar Company"),
+                 tooltip=["Neighbor", alt.Tooltip("Confidence", format=".3f")],
+                 color=alt.Color("Confidence:Q", scale=alt.Scale(), legend=None)
+                ).properties(
+                  height=25 * num_neighbors + 90
+                ).configure_axis(grid=False)
+     st.altair_chart(conf_plot, use_container_width=True)
 
 if __name__ == '__main__':
     main()
