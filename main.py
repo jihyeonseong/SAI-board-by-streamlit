@@ -11,8 +11,10 @@ from plt_setup import finastra_theme
 
 @st.cache(show_spinner=False, suppress_st_warning=True,
           allow_output_mutation=True)
-def load_data(data_category='validation.csv'):
-    data = pd.read_csv(f'./data/{data_category}')
+def load_data(data_category='validation'):
+    data1 = pd.read_csv(f'./data/{data_category}_1.csv')
+    data2 = pd.read_csv(f'./data/{data_category}_2.csv')
+    data = pd.concat([data1, data2])
     data.set_index('timestamp', inplace=True)
     return data
 
