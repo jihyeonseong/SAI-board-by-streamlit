@@ -162,7 +162,7 @@ def main():
                  tooltip=["Neighbor", alt.Tooltip("Confidence", format=".3f")],
                  color=alt.Color("Confidence:Q", scale=alt.Scale(), legend=None)
                 ).properties(
-                  height=25 * num_neighbors + 90
+                  height=25 * ranking + 90
                 ).configure_axis(grid=False)
     st.altair_chart(conf_plot, use_container_width=True)
 
