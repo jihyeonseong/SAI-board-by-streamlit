@@ -84,7 +84,7 @@ def main():
     df2["WHO"] = "Rolling Mean"
     plot_df = pd.concat([df1, df2]).reset_index(drop=True)
     plot_df["timestamp"] = pd.to_datetime(plot_df["timestamp"])
-    metric_chart = alt.Chart(plot_df, title="Trends Over Time"
+    metric_chart = alt.Chart(plot_df, title="Trends Over Time", padding={"left": 10, "top": 1, "right": 10, "bottom": 1}
                              ).mark_line().encode(
         x=alt.X("yearmonthdatehoursminutesseconds(timestamp):O", title="DATE"),
         y=alt.Y(f"{sensor}:Q", scale=alt.Scale(type="linear")),
@@ -117,11 +117,11 @@ def main():
         else:
             cnt+=1
 
-    st.subheader(str(datetime.strptime(attack_end ,"%Y-%m-%d %H:%M:%S")-datetime.strptime(attack_start, "%Y-%m-%d %H:%M:%S"))+" attack remains")
+    st.subheader("Recent Attack"+str(datetime.strptime(attack_end ,"%Y-%m-%d %H:%M:%S")-datetime.strptime(attack_start, "%Y-%m-%d %H:%M:%S"))+" attack remains")
     sensor = st.selectbox("Attacked Sensors", data.columns[:-1])
     col1, col2 = st.columns((1, 4))
     metric_options = [5, 10, 30, 60]
-    roll = col1.radio("Choose Metric", options=metric_options)
+    roll = col1.radio("Rolling Window", options=metric_options)
 
     df = data.loc[attack_start:attack_end].copy()
     df1 = df.loc[:, [sensor]].reset_index()[roll:]
@@ -130,7 +130,7 @@ def main():
     df2["WHO"] = "Rolling Mean"
     plot_df = pd.concat([df1, df2]).reset_index(drop=True)
     plot_df["timestamp"] = pd.to_datetime(plot_df["timestamp"])
-    metric_chart = alt.Chart(plot_df, title="Trends Over Time"
+    metric_chart = alt.Chart(plot_df, title="Trends Over Time", padding={"left": 10, "top": 1, "right": 10, "bottom": 1}
                              ).mark_line().encode(
         x=alt.X("yearmonthdatehoursminutesseconds(timestamp):O", title="DATE"),
         y=alt.Y(f"{sensor}:Q", scale=alt.Scale(type="linear")),
