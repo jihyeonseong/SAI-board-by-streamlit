@@ -155,12 +155,13 @@ def main():
     ranking = st.sidebar.slider("Select Number of Important Sensor Ranking", 1, 20, value=5)
     rel_rank = pd.read_csv('./data/ranking.csv')
     rel_rank.reset_index(inplace=True)
+    rel_rank.rename(columns={"index": "Sensors"}, inplace=True)
     top_ranking = rel_rank[:ranking]
     conf_plot = alt.Chart(top_ranking, title=f"Top {ranking} important sensors", padding={"left": 1, "top": 10, "right": 1, "bottom": 1}
                     ).mark_bar().encode(
                     x=alt.X("ABS_MEAN:Q", title="Confidence"),
-                    y=alt.Y("index:N", sort="-x", title="Sensors"),
-                 tooltip=["index", alt.Tooltip("ABS_MEAN", format=".3f")],
+                    y=alt.Y("Sensors:N", sort="-x", title="Sensors"),
+                 tooltip=["Sensors", alt.Tooltip("ABS_MEAN", format=".3f")],
                  color=alt.Color("ABS_MEAN:Q", scale=alt.Scale(), legend=None)
                 ).properties(
                   height=25 * ranking + 90
