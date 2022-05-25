@@ -27,9 +27,16 @@ Traditionally, Neural Network used to be "black-box model" which is not interpre
 This means, when NN make a decision, we cannnot know **why NN make such decision**.
 And go further, when NN make wrong decision, we cannot revise model because we donnot know **what makes wrong decision**
 
+**However with LRP, we can explain why model make such decision!**
+
+LRP is the method of explanation by decomposition and get relevance score by variable. 
+With top-down way, output-to-input layer, the relevance is redistributed.
+So we can get each variables' relevance score and with high score, that variable is important with making decision.
+
+![LRP with layer](./img/lrp2.png)
 
 ***[Reference URL-eng](https://towardsdatascience.com/indepth-layer-wise-relevance-propagation-340f95deb1ea)***
 
-***[Regerence URL-korean](https://angeloyeo.github.io/2019/08/17/Layerwise_Relevance_Propagation.html)***
+***[Regerence URL-kor](https://angeloyeo.github.io/2019/08/17/Layerwise_Relevance_Propagation.html)***
 
 ## 2. Streamlit Dashboard (data visualization)
