@@ -19,12 +19,11 @@ And go further, when NN make wrong decision, we cannot revise model because we d
 
 Let's see ML example with **Linear Regression** and **Decision Tree**.
 First with Linear Regression, we can get ***coefficient*** and ***intercept***.
-![Linear Regression Interpretability with Coefficient Importance](./img/LR_coefficient_importance_ex.png)
-
-You can get important x variable with **Coefficient Importance** like above image.
+You can get important x variable with **Coefficient Importance** like below image.
+<img src="./img/LR_coefficient_importance_ex.png" width="200" height="400"/>
 
 Also with Decision Tree, we can visualize how the tree was divided to leaf recursively.
-![Decision Tree Visualiztion](./img/DT_visualization_ex.png)
+<img src="./img/DT_visualization_ex.png" width="200" height="400"/>
 
 However, how we can get importance variable and visualize the NN model?
 
