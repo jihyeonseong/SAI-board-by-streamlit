@@ -44,8 +44,18 @@ So we can get each variables' relevance score and with high score, that variable
 ### Data Monitoring in Real-Time by seconds
 ![Data Monitoring](./img/TimeSeries_visualization.png)
 
+You can see data by seconds with selected hour, minute and sensor.
+Rolling mean is also provided for assistence indicator.
+
 ### Recent Attack Data Monitoring
 ![Attack Data](./img/Attack_Monitoring.png)
 
+You can see ***recent attack data*** with rolling mean indicator, and you can compare with above graph.
+
 ### Important Sensor to Detect Attack by LRP
 ![Data Importance](./img/Data_Importance.png)
+
+You can see what sensor is important when detecting attack!
+
+## Note
+MIT Liscnece
