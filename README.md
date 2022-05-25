@@ -5,11 +5,13 @@ This repository is constructed for "Cyber Security AI Dashboard" and linked with
 
 ## 1. LRP
 ![Captum](./img/captum.png)
+
 XAI can interpretate the black-box deep AI model which is constructed with many Linear, Convolution layers. 
 Pytorch, which is the biggest AI opensource code library with tensorflow, constructed "Captum", XAI library, that can interprete deep AI model with Linear and Conv layer.
 There are many XAI techniques, and this repository use LRP.
 
 ![LRP](./img/lrp.png)
+
 LRP is a word which is shorten version of "Layer-wise Relevance Propagation".
 Traditionally, Neural Network used to be "black-box model" which is not interpretable. 
 This means, when NN make a decision, we cannnot know **why NN make such decision**.
@@ -17,10 +19,13 @@ And go further, when NN make wrong decision, we cannot revise model because we d
 
 Let's see ML example with **Linear Regression** and **Decision Tree**.
 First with Linear Regression, we can get ***coefficient*** and ***intercept***.
+
 ![Linear Regression Interpretability with Coefficient Importance](./img/LR_coefficient_importance_ex.png)
+
 You can get important x variable with **Coefficient Importance** like above image.
 
 Also with Decision Tree, we can visualize how the tree was divided to leaf recursively.
+
 ![Decision Tree Visualiztion](./img/DT_visualization_ex.png)
 <br></br>
 
