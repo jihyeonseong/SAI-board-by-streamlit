@@ -38,5 +38,14 @@ So we can get each variables' relevance score and with high score, that variable
 ***[Reference URL-eng](https://towardsdatascience.com/indepth-layer-wise-relevance-propagation-340f95deb1ea)***
 
 ***[Regerence URL-kor](https://angeloyeo.github.io/2019/08/17/Layerwise_Relevance_Propagation.html)***
+<br></br>
 
 ## 2. Streamlit Dashboard (data visualization)
+### Data Monitoring in Real-Time by seconds
+![Data Monitoring](./img/TimeSeries_visualization.png)
+
+### Recent Attack Data Monitoring
+![Attack Data](./img/Attack_Monitoring.png)
+
+### Important Sensor to Detect Attack by LRP
+![Data Importance](./img/Data_Importance.png)
