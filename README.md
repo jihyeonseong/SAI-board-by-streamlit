@@ -3,6 +3,8 @@ This repository is constructed for "Cyber Security AI Dashboard" and linked with
 
 **Demonstrating the power of Streamlit.** [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/monouns/sai-board/main.py)
 
+![SAI-board](./img/SAI-board.gif)
+
 ## 1. LRP
 ![Captum](./img/captum.png)
 
