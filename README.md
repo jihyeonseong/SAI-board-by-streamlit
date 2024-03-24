@@ -1,7 +1,7 @@
 # SAI-board (Cyber Security AI Dashboard)
 This repository is constructed for "Cyber Security AI Dashboard" and linked with streamlit.
 
-**Demonstrating the power of Streamlit.** [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/monouns/sai-board/main.py)
+**Demonstrating the power of Streamlit.** [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sai-board-by-app-nj4yeqckfa6wvuhaownhh9.streamlit.app/)
 
 ![SAI-board](./img/SAI-board.gif)
 
